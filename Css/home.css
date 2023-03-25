@@ -1,0 +1,12 @@
+.header-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    opacity: 1;
+    transition: all 1.4s ease 0s;
+}
+
