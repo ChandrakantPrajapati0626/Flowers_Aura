@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Page</title>
-    <link rel="stylesheet" href="./../Css/pizza.cs">
-    <link rel="stylesheet" href="./../Javascript/pizza.js">
+    <link rel="stylesheet" href="./../Css/pizza.css">
+     <script src="./../Javascript/pizza.js"></script>
 </head>
 <body>
     <form>
@@ -22,11 +22,11 @@
           <option value="Dessert">Dessert</option>
         </select>
 
-       
+        <button type="button" id="button" onclick="generateImage()">Randomize Images</button>
 
       </form>
 
-       <button type="button" id="button" onclick="generateImage()">Randomize Images</button>
+       
 
       <div class="image-container">
         <img id="image" src="" alt="">
