@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Page</title>
+    <link rel="stylesheet" href="./../Css/dessert.css">
+    <script src="./../Javascript/dessert.js"></script>
+</head>
+<body>
+    <form>
+        
+        <label for="category">Select your category</label>
+       
+
+        <select id="category">
+          <option value="Cookies">Cookies</option>
+          <option value="Cake">Cake</option>
+          <option value="Chocolate">Chocolate</option>
+          <option value="Ice Cream">Ice Cream</option>
+          <option value="Candy">Candy</option>
+        </select>
+
+       
+
+      </form>
+
+       <button type="button" id="button" onclick="generateImage()">Randomize Images</button>
+
+      <div class="image-container">
+        <img id="image" src="" alt="">
+      </div>
+
+      <div class="input-field">
+        <input type="text" id="image-url" placeholder="Image URL">
+        <button type="button" onclick="copyImageUrl()">Copy Image URL</button>
+      </div>
+</body>
+</html>
