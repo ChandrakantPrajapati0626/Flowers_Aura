@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Page</title>
+    <link rel="stylesheet" href="./../Css/pizza.cs">
+    <link rel="stylesheet" href="./../Javascript/pizza.js">
+</head>
+<body>
+    <form>
+        <!-- <label class="category-name">🍕🍕Our Pizza Images🍕🍕</label> -->
+        <label for="category">Select your category</label>
+       
+
+        <select id="category">
+          <option value="cheese pizza">Cheese Pizza</option>
+          <option value="Fast Food">Fast Food</option>
+          <option value="Biryani">Non-Veg Biryani</option>
+          <option value="Beverages">Beverages</option>
+          <option value="Dessert">Dessert</option>
+        </select>
+
+       
+
+      </form>
+
+       <button type="button" id="button" onclick="generateImage()">Randomize Images</button>
+
+      <div class="image-container">
+        <img id="image" src="" alt="">
+      </div>
+
+      <div class="input-field">
+        <input type="text" id="image-url" placeholder="Image URL">
+        <button type="button" onclick="copyImageUrl()">Copy Image URL</button>
+      </div>
+</body>
+</html>
