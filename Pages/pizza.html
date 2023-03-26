@@ -9,6 +9,25 @@
      <script src="./../Javascript/pizza.js"></script>
 </head>
 <body>
+
+
+  <nav>
+    <ul >
+        <li><a href='./../index.html'>Home🏠</a></li>
+        <li><a href='./pizza.html'>Pizza🍕</a></li>
+        <li><a href='./dessert.html'>Dessert🍫</a></li>
+        <li><a href='./biryani.html'>Biryani🍗</a></li>
+        <li><a href="./fastfood.html">Fast Food🍔</a></li>
+        <li><a href="./bevarages.html">Bevarages🍺</a></li>
+        
+    </ul>
+</nav>
+
+  <!-- <div class="footer">
+        
+
+  </div> -->
+
     <form>
         <!-- <label class="category-name">🍕🍕Our Pizza Images🍕🍕</label> -->
         <label for="category">Select your category</label>
@@ -16,10 +35,10 @@
 
         <select id="category">
           <option value="cheese pizza">Cheese Pizza</option>
-          <option value="Fast Food">Fast Food</option>
-          <option value="Biryani">Non-Veg Biryani</option>
-          <option value="Beverages">Beverages</option>
-          <option value="Dessert">Dessert</option>
+          <option value="paneer pizza">Paneer Pizza</option>
+          <option value="veg pizza">Veg Pizza</option>
+          <option value="pepperoni pizza">Pepperoni Pizza</option>
+          <option value="hawaiian pizza">Hawaiian Pizza</option>
         </select>
 
         <button type="button" id="button" onclick="generateImage()">Randomize Images</button>
@@ -36,5 +55,7 @@
         <input type="text" id="image-url" placeholder="Image URL">
         <button type="button" onclick="copyImageUrl()">Copy Image URL</button>
       </div>
+
+      
 </body>
 </html>
