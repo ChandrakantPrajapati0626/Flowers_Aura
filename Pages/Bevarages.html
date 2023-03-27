@@ -145,6 +145,7 @@
         <li><a href="./bevarages.html">Bevarages🍺</a></li>
     </ul>
 </nav>
+
   <form>
     <label for="category" class="lable">Cold Drink And Bevarages:</label>
     <select id="category">
@@ -155,13 +156,16 @@
     </select>
     <button type="button" onclick="generateImage()">Randomize Images</button>
   </form>
+
   <div class="image-container">
     <img id="image" src="https://source.unsplash.com/500x500/?Cold Drink&sig=5" alt="" class="img">
   </div>
+
   <div class="input-field">
     <input type="text" id="image-url" placeholder="Image URL">
     <button type="button" onclick="copyImageUrl()">Copy Image URL</button>
   </div>
+
   <script>
     // JavaScript code to generate random images
     function generateImage() {
