@@ -1,12 +1,224 @@
-.header-img {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 90%;
-    width: 100%;
-    object-fit: cover;
-    transform: scale(1.1);
-    opacity: 1;
-    transition: all 1.4s ease 0s;
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
 }
 
+.header-img-container {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header-img {
+    width: 100%;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 200px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0, 6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content h1 {
+    font-size: 100px;
+    text-shadow:  2px 3px 5px rgb(29, 27, 27);
+    font-weight: bolder;
+    color: #f3eaea;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.cat-content {
+    position: absolute;
+    top: 320px;
+    left: 280px;
+    margin-top: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    color: #f6f6f6;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 550;
+}
+
+.food-card-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 25px;
+    position: absolute;
+    top: 770px;
+    left: 152px;
+
+}
+
+.food-card-container-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 25px;
+    position: absolute;
+    top: 162%;
+    left: 152px;
+}
+
+.food-card {
+    width: 350px;
+    margin: 27px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px grey;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.food-card hr {
+    color: rgb(232, 228, 228);
+}
+
+.food-card-img-div {
+    text-align: center;
+}
+
+.food-card-img {
+    width: 100%;
+    height: 30vh;
+    border-radius: 10px;
+
+}
+
+.card-content {
+    margin: 8px;
+    padding: 2px;
+    margin-left: 9px;
+    margin-bottom: 9px;
+    font-size: 18px;
+}
+
+.card-content p {
+    margin: 2px;
+    margin-top: 5px;
+    color: black;
+}
+
+ .collection-container {
+    position: absolute;
+    top: 680px;
+    left: 191px;
+ }
+
+ .collection-container h2 {
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+
+ .collection-container p {
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+
+ .food {
+    position: absolute;
+    top: 70%;
+    left: 610px;
+    font-size: 30px;
+ }
+
+.selector {
+    width: 350px;
+}
+
+#selectField {
+    width: 100%;
+    padding: 15px 27px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    background: rgb(244, 237, 237);
+    color: black;
+    border-radius: 8px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#selectText {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+
+#selectField img {
+    width: 15px;
+}
+
+#list {
+    width: 100%;
+    background: #f6f6f6
+
+}
+
+.hide {
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.option-ctn {
+    border-radius: 8px;
+}
+
+.options {
+    width: 100%;
+    padding: 17px 0 17px 75px;
+    list-style: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+}
+.options a {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    color: black;
+    font-size: 23px;
+}
+
+.options:hover{
+    background: rgb(194, 201, 244);
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+.options-img {
+    width: 25px;
+    position: absolute;
+    top: 12px;
+    left: 25px;
+}

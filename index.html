@@ -1,12 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Document</title>
     <link rel="stylesheet" href="./Css/home.css">
 </head>
+
 <body>
     <div class="header-img-container">
-        <img src="./Images/header-img.jpg" alt="" class="header-img">
+        <div class="header-img">
+            <img src="Images/header-img-2.jpg" alt="" />
+            <div class="content">
+                <p class="cat-content">Discover The Best Food & Drinks In India</p>
+                <h1>HUNGER POINT</h1>
+            </div>
+        </div>
     </div>
+    <br><br>
+    <div class="collection-container">
+        <h2>Collections</h2> <br>
+        <p>Explore curated lists of top restaurants, cafes, pubs, and bars in , based on trends</p>
+    </div>
+
+    <br> <br>
+    <div class="food-card-container">
+
+        <div class="food-card">
+
+            <div class="food-card-img-div">
+                <img src="./Images/biryani.jpg" alt="" class="food-card-img">
+            </div>
+             <br><hr> 
+            <div class="card-content">
+                <h3>Biryani </h3> 
+                <p>  Stay home and order your faviourite food </p>
+            </div>
+
+        </div>
+        <div class="food-card">
+
+            <div class="food-card-img-div">
+                <img src="./Images/pav.jpg" alt="" class="food-card-img">
+            </div>
+            <br><hr>
+            <div class="card-content">
+                <h3>Pav Bhaji </h3>
+                <p>  Stay home and order your faviourite food </p>
+            </div>
+
+        </div>
+        <div class="food-card">
+
+            <div class="food-card-img-div">
+                <img src="./Images/pizza.jpg" alt="" class="food-card-img">
+            </div>
+            <br><hr>
+            <div class="card-content">
+                <h3>Pizza</h3> 
+                <p>  Stay home and order your faviourite food </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="food-card-container-2">
+
+        <div class="food-card">
+
+            <div class="food-card-img-div">
+                <img src="./Images/bevarages.jpg" alt="" class="food-card-img">
+            </div>
+            <br><hr>
+            <div class="card-content">
+                <h3>Bevarages</h3> 
+                <p>  Stay home and order your faviourite food </p>
+            </div>
+
+        </div>
+        <div class="food-card">
+
+            <div class="food-card-img-div">
+                <img src="./Images/deserts.jpg" alt="" class="food-card-img">
+            </div>
+            <br><hr>
+            <div class="card-content">
+                <h3>Deserts </h3> 
+                <p>Stay home and order your faviourite food </p>
+            </div>
+
+        </div>
+        <div class="food-card">
+
+            <div class="food-card-img-div">
+                <img src="./Images/cakes.jpg" alt="" class="food-card-img">
+            </div>
+            <br><hr>
+            <div class="card-content">
+                 <h3>Cakes & Sweets</h3> 
+                <p>Stay home and order your faviourite food </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="food">
+        <div class="selector">
+            <div id="selectField">
+                <p id="selectText">Select Your Fav Food</p>
+                <img src="./Images/down-chevron.png" alt="" id="arrowIcon">
+            </div>
+             
+            <ul id="list" class="hide option-ctn">
+                <li class="options">
+                    <a href="">Pizza</a>
+                    <img src="./Images/pizza.png" alt="" class="options-img">
+                </li>
+                <li class="options">
+                    <a href="">Bevarages</a>
+                    <img src="./Images/healthy-drink.png" alt="" class="options-img">
+                </li>
+                <li class="options">
+                    <a href="">Biryani</a>
+                    <img src="./Images/biryani.png" alt="" class="options-img">
+                </li>
+                <li class="options">
+                    <a href="">Fast Food</a>
+                    <img src="./Images/burger.png" alt="" class="options-img">
+                </li>
+                <li class="options">
+                    <a href="">Deserts</a>
+                    <img src="./Images/laddu.png" alt="" class="options-img">
+                </li>
+                <li class="options">
+                    <a href="">Cake</a>
+                    <img src="./Images/cake-slice.png" alt="" class="options-img">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const selectField = document.getElementById("selectField");
+        const selectText = document.getElementById("selectText");
+        const options = document.getElementsByClassName("options");
+        const list = document.getElementById("list");
+        const arrowIcon = document.getElementById("arrowIcon")
+
+        selectField.onclick = function(){
+            list.classList.toggle("hide");
+            arrowIcon.classList.toggle("rotate");
+        }
+
+        for(option of options){
+            option.onclick = function() {
+                selectText.innerHTML = this.textContent;
+                arrowIcon.classList.toggle("rotate");
+            }
+        }
+
+    </script>
+
+
+
 </body>
+
 </html>
