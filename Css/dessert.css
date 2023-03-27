@@ -1,5 +1,5 @@
 body{
-    background-color: aqua;
+    background-color: rgb(250, 214, 213);
 }
 form {
 display: flex;
@@ -41,7 +41,7 @@ margin-top: 10px;
 margin-left: 350px;
 height: 600px;
 width: 600px;
-background-color: rgb(198, 249, 255);
+background-color: ivory;
 border-radius: 50px;
 box-shadow: 1px 1px 2px 2px black;
 }
@@ -89,4 +89,39 @@ cursor: pointer;
 background-color: #3e8e41;
 box-shadow: 4px 4px 3px 2px;
 color: rgb(202, 254, 209);
+}
+#con {
+    margin-left: 50px;
+    font-size: 30px;
+    padding: 10px 20px;
+    background-color: #f795a0;
+    color: white;
+    border: 2px solid rgb(180, 250, 163);
+    border-radius: 15px;
+    cursor: pointer;
+}
+#con:hover {
+    background-color: #dfe7f7;
+    box-shadow: 4px 4px 3px 2px;
+    color: rgb(245, 218, 237);
+}
+#box {
+    margin-left: 940px;
+    font-size: 30px;
+    padding: 10px 20px;
+    background-color: #f795a0;
+    color: white;
+    border: 2px solid rgb(180, 250, 163);
+    border-radius: 15px;
+    cursor: pointer;
+}
+#box:hover {
+    background-color: #dfe7f7;
+    box-shadow: 4px 4px 3px 2px;
+    color: rgb(245, 218, 237);
+}
+.container1{
+    display:flex;
+    flex-display: row;
+    
 }
