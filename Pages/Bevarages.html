@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bevarages Image Generator</title>
+  <style>
+    body {
+      margin: 0%;
+      padding: 0%;
+      background-image: url(background.jpg);
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .lable {
+      color: white;
+      font-size: 30px;
+    }
+
+    /* CSS styling for the form and button */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5px;
+    }
+
+    label {
+      font-size: 20px;
+      margin-bottom: 7px;
+    }
+
+    select {
+      font-size: 16px;
+      padding: 5px;
+      margin-bottom: 12px;
+      border: 2px solid black;
+
+    }
+
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3e8e41;
+      border: 2px solid black;
+      padding: 7px 14px;
+    }
+
+    /* CSS styling for the image display */
+    .image-container {
+      display: block;
+      justify-content: center;
+      margin: 15px auto;
+      border: 5px double white;
+      padding: 1px;
+      max-width: 450px;
+      max-height: 450px;
+      border-radius: 15px;
+    }
+
+    .img {
+      max-width: 450px;
+      max-height: 450px;
+      margin: 1px auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    /* CSS styling for the input field */
+    .input-field {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    input[type="text"] {
+      font-size: 16px;
+      padding: 5px;
+      margin-bottom: 1px;
+      width: 600px;
+      border: 3px solid rgb(84, 238, 243);
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 13px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <label for="category" class="lable">Cold Drink And Bevarages:</label>
+    <select id="category">
+      <option value="Cold Drink">Cold Drink</option>
+      <option value="Wine">Wine</option>
+      <option value="Beer">Beer</option>
+      <option value="Spirit">Spirit</option>
+    </select>
+    <button type="button" onclick="generateImage()">Add Image</button>
+  </form>
+  <div class="image-container">
+    <img id="image" src="https://source.unsplash.com/500x500/?Cold Drink&sig=5" alt="" class="img">
+  </div>
+  <div class="input-field">
+    <input type="text" id="image-url" placeholder="Image URL">
+    <button type="button" onclick="copyImageUrl()">Copy Image URL</button>
+  </div>
+  <script>
+    // JavaScript code to generate random images
+    function generateImage() {
+      const category = document.getElementById('category').value;
+      const num = Math.floor(Math.random() * 10) + 1; // Generate a random number from 1 to 10
+      const imageUrl = `https://source.unsplash.com/500x500/?${category}&sig=${num}`;
+      document.getElementById('image').src = imageUrl;
+      document.getElementById('image-url').value = imageUrl;
+    }
+    // JavaScript code to copy image URL
+    function copyImageUrl() {
+      const imageUrl = document.getElementById('image-url').value;
+      navigator.clipboard.writeText(imageUrl);
+      alert('Image URL copied to clipboard!');
+    }
+  </script>
+</body>
+
+</html>
