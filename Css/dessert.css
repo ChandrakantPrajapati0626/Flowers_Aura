@@ -45,6 +45,7 @@ background-color: rgb(198, 249, 255);
 border-radius: 50px;
 box-shadow: 1px 1px 2px 2px black;
 }
+
 img {
 max-width: 560px;
 max-height: 560px;
@@ -95,14 +96,10 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
-  height: 100%;
-  width: 100%;
-  /* background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(peakpx.jpg);
-  background-position: center;
-  background-size: cover; */
-  
-  
-}
+    height: 100%;
+    width: 100%;  
+  }
+
 nav{
  
   top:0;
@@ -130,6 +127,7 @@ nav ul li a{
   font-weight: bold;
   text-transform: uppercase;
 }
+
 nav ul li a:hover{
   background:  #3e8e41;;
   border-radius: 6px;
