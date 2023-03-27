@@ -1,59 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza Page</title>
-    <link rel="stylesheet" href="./../Css/pizza.css">
-     <script src="./../Javascript/pizza.js"></script>
+    <title>Bevarages Image Generator</title>
+    <link rel="stylesheet" href="./../Css/fastfood.css">
 </head>
+
 <body>
+    <div class="navbar">
 
-
-  <nav>
-    <ul >
-        <li><a href='./../index.html'>Home🏠</a></li>
-        <li><a href='./pizza.html'>Pizza🍕</a></li>
-        <li><a href='./dessert.html'>Dessert🍫</a></li>
-        <li><a href='./biryani.html'>Biryani🍗</a></li>
-        <li><a href="./fastfood.html">Fast Food🍔</a></li>
-        <li><a href="./bevarages.html">Bevarages🍺</a></li>
-    </ul>
-</nav>
-
-  <!-- <div class="footer">
         
+        <div class="sections-container">
+            <a href="#home" class="sections">Pizza🍕</a>
+            <a href="#cart" class="sections">Biryani🍗</a>
+            <a href="#featured" class="sections">Bevarages🍺</a>
+            <a href="#arrivals" class="sections">Cakes🍰</a>
+            <a href="#reviews" class="sections">Fast Food🍜</a>
+        </div>
+    </div>
 
-  </div> -->
+    <br>
 
     <form>
-        <!-- <label class="category-name">🍕🍕Our Pizza Images🍕🍕</label> -->
-        <label for="category">Select your category</label>
-       
-
+        <label for="category" class="lable">Delicious Pizza Center</label>
         <select id="category">
-          <option value="cheese pizza">Cheese Pizza</option>
-          <option value="paneer pizza">Paneer Pizza</option>
-          <option value="veg pizza">Veg Pizza</option>
-          <option value="pepperoni pizza">Pepperoni Pizza</option>
-          <option value="hawaiian pizza">Hawaiian Pizza</option>
+            <option value="Cold Drink">Cold Drink</option>
+            <option value="Wine">Wine</option>
+            <option value="Beer">Beer</option>
+            <option value="Spirit">Spirit</option>
         </select>
+        <button type="button" onclick="generateImage()">Randomize Images</button>
+    </form>
 
-        <button type="button" id="button" onclick="generateImage()">Randomize Images</button>
+    <div class="image-container">
+        <img id="image" src="https://source.unsplash.com/500x500/?Cold Drink&sig=5" alt="" class="img">
+    </div>
 
-      </form>
-
-       
-
-      <div class="image-container">
-        <img id="image" src="" alt="">
-      </div>
-
-      <div class="input-field">
+    <div class="input-field">
         <input type="text" id="image-url" placeholder="Image URL">
         <button type="button" onclick="copyImageUrl()">Copy Image URL</button>
-      </div>
-      
+    </div>
+
+    <script>
+        // JavaScript code to generate random images
+        function generateImage() {
+            const category = document.getElementById('category').value;
+            const num = Math.floor(Math.random() * 10) + 1; // Generate a random number from 1 to 10
+            const imageUrl = `https://source.unsplash.com/500x500/?${category}&sig=${num}`;
+            document.getElementById('image').src = imageUrl;
+            document.getElementById('image-url').value = imageUrl;
+        }
+        // JavaScript code to copy image URL
+        function copyImageUrl() {
+            const imageUrl = document.getElementById('image-url').value;
+            navigator.clipboard.writeText(imageUrl);
+            alert('Image URL copied to clipboard!');
+        }
+    </script>
 </body>
+
 </html>
